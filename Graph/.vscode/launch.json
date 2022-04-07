@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch BFS",
+            "request": "launch",
+            "mainClass": "BFS",
+            "projectName": "Graph_52a70a47"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS_Recur",
+            "request": "launch",
+            "mainClass": "DFS_Recur",
+            "projectName": "Graph_52a70a47"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFS_Stack",
+            "request": "launch",
+            "mainClass": "DFS_Stack",
+            "projectName": "Graph_52a70a47"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dijkstra",
+            "request": "launch",
+            "mainClass": "Dijkstra",
+            "projectName": "Graph_52a70a47"
+        },
+        {
+            "type": "java",
+            "name": "Launch Prim",
+            "request": "launch",
+            "mainClass": "Prim",
+            "projectName": "Graph_52a70a47"
+        }
+    ]
+}
