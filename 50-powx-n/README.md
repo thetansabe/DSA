@@ -33,3 +33,20 @@
 	<li>Either <code>x</code> is not zero or <code>n &gt; 0</code>.</li>
 	<li><code>-10<sup>4</sup> &lt;= x<sup>n</sup> &lt;= 10<sup>4</sup></code></li>
 </ul>
+
+### Explain the 'whys' in the algo:
+<img width="1227" height="773" alt="image" src="https://github.com/user-attachments/assets/70dd1599-1f1b-42af-ab5b-2b96b0aa8462" />
+
+a^b = 2^13 = 2^6 * 2^6 * 2 = ...
+
+Step 1: remove standalone 2 => res = res * 2 => we only have 2^6 * 2^6 left
+
+Step 2: 2^6 * 2^6 = 2^(2^6) = 4^6 = (a^2)^(b/2) with a, b from step 1
+
+Step 3: 4^6 = 4^3 * 4^3 = 4^(2*3) = 16^3 = (a^2)^(b/2) with a, b from step 2 
+
+=> for each iteration, a = a^2 = a*a; b = b / 2;
+
+...the following...
+
+When a^b = 256^1, res *= 256; b/2 = 1/2 = 0 => stop loop
