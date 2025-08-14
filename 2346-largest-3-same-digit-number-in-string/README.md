@@ -1,3 +1,7 @@
+<h2> Int to Char conversion</h2>
+<p>from char to int: num - '0'</p>
+<p>from int to char: (char)('0' + max)</p>
+
 <h2><a href="https://leetcode.com/problems/largest-3-same-digit-number-in-string">Largest 3-Same-Digit Number in String</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given a string <code>num</code> representing a large integer. An integer is <strong>good</strong> if it meets the following conditions:</p>
 
 <ul>
