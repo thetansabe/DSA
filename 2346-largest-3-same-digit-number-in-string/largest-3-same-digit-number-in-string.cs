@@ -1,18 +1,20 @@
 public class Solution {
+
+    // Tips: 
+    // from char to int: num - '0'
+    // from int to char: (char)('0' + max)
     public string LargestGoodInteger(string num) {
-        int max = 0;
+        int max = -1;
         int l = 0;
 
-        bool hasGood = false;
-        
         for (int r = 0; r < num.Length; r++)
         {
             // update pointers
             if (num[r] == num[l])
             {
                 if (r - l >= 2) {
-                    hasGood = true;
-                    max = Math.Max(int.Parse(num[l].ToString()), max);
+                    // convert char to int
+                    max = Math.Max(num[l] - '0', max);
                 }
             }
             else
@@ -20,15 +22,16 @@ public class Solution {
                 l = r;
             }
         }
-
+        
         if(num.Length - l >= 3)
         {
-            max = Math.Max(int.Parse(num[l].ToString()), max);
-            return new string(max.ToString()[0], 3);
+            max = Math.Max(num[l] - '0', max);
         }
 
-        if(!hasGood) return string.Empty;
+        if(max < 0) return string.Empty;
 
-        return new string(max.ToString()[0], 3);
+        // from int to char
+        char maxChar = (char)('0' + max);
+        return new string(maxChar, 3);
     }
 }
